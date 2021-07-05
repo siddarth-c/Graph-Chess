@@ -1,10 +1,10 @@
-# Who will win?
+# Graph Chess
 
-This is an attempt to predict the result of a game of chess between any 2 player given their previous match history. <br>
+This is an attempt to predict the result of a game of chess between any 2 player given their previous match history <br>
 
 This repository contains:
 
-1. [The dataset](out.txt) and its [readme](README.chess).
+1. [The dataset](out.txt) and its [readme](README.chess)
 2. The python [code](GrandMaster.py)
 3. The generated [graph](graph.png)
 4. And a few other ReadMe related files
