@@ -1,4 +1,4 @@
-# Grandmaster Using Graphs
+# Who is the Grandmaster?
 
 This is an attempt to predict the result of a game of chess between any 2 player given their previous match history. <br>
 
