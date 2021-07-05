@@ -1,4 +1,4 @@
-# Who is the Grandmaster?
+# Who will win?
 
 This is an attempt to predict the result of a game of chess between any 2 player given their previous match history. <br>
 
