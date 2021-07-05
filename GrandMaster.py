@@ -93,11 +93,9 @@ graph = graph.cuda()
 
 total_edges = len(w2b_edge[0])
 
-train_mask = torch.tensor([True for i in range(int(.7 * total_edges))] + [False for i in range(total_edges - int(.7 * total_edges))])
+train_mask = torch.tensor([True for i in range(int(.80 * total_edges))] + [False for i in range(total_edges - int(.80 * total_edges))])
 
-valid_mask = torch.tensor([False for i in range(int(.7 * total_edges))] + [True for i in range(int(.15 * total_edges))] + [False for i in range(total_edges - int(.7 * total_edges)- int(.15 * total_edges))])
-
-test_mask = torch.tensor([False for i in range(int(.7 * total_edges) + int(.15 * total_edges))] + [True for i in range(total_edges - int(.7 * total_edges) - int(.15 * total_edges))])
+valid_mask = torch.logical_not(train_mask)
 
 # Uncomment the following to see the detailed statistics of the graph
 
