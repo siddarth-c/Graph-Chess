@@ -18,7 +18,6 @@ from torch_geometric.data import Data
 import torch.nn.functional as F
 
 import numpy as np
-import glob
 
 # Used for visualiztion of the graph
 # import networkx as nx
