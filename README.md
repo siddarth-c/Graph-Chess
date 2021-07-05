@@ -4,10 +4,10 @@ This is an attempt to predict the result of a game of chess between any 2 player
 
 This repository contains:
 
-1. [The dataset](out.txt) and its [readme](out_readme.txt).
-2. The python [code](grandmaster.py)
+1. [The dataset](out.txt) and its [readme](README.chess).
+2. The python [code](GrandMaster.py)
 3. The generated [graph](graph.png)
-4. This ReadMe
+4. And a few other ReadMe related files
 
 
 ## Table of Contents
