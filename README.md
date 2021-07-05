@@ -39,7 +39,7 @@ The dataset used in this repo is the [Chess network, part of the Koblenz Network
 Consider the below example, where the 5 players form the nodes, and the edges representing a game played between them. <br>
 ![demo](demo2.svg) 
 
-The red directed line between 2 players represents a game of chess, where the player having an outgoing edge is white and the player having an ingoing edge plays black. Our task given the results of the played matches, is to predict the outcome of the green lines.  This is an edge classification task, where an edge has to be classified as either -1 or 0 or 1
+The red directed line between 2 players represents a game of chess, where the player having an outgoing edge is white and the player having an incoming edge plays black. The task is, given the results of the played matches, to predict the outcome of the green lines.  This is an edge classification task, where an edge has to be classified as either -1 or 0 or 1
 
 
 ## Model Architecture
