@@ -17,6 +17,7 @@ This repository contains:
 - [Model Architecture](#model-architecture)
 - [To Run](#to-run)
 - [Future Work](#future-work)
+- [Citation](#citation)
 
 
 ## Dataset
@@ -75,3 +76,11 @@ python3 grandmaster.py
 ```
 ## Future Work
 The problem that was encountered while building the graph network was the inability to differentiate the win and loss edges via positive and negative edge weights. This is important because if all the edge weights are positive then there would be no difference between a winning directed edge and a lossing directed edge. None of the present (Jun 2021) graph neural algorithms support negative edge weights, and if in future any algorithm with this ability is introduced, it may be used to experiment on this datasset.
+
+## Citation
+@MISC{konect:2017:chess,
+    title = {Chess network dataset -- {KONECT}},
+    month = oct,
+    year = {2017},
+    url = {http://konect.cc/networks/chess}
+}
