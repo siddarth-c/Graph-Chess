@@ -16,6 +16,7 @@ This repository contains:
 - [Mini Example](#mini-example)
 - [Model Architecture](#model-architecture)
 - [To Run](#to-run)
+- [Results and Observation](#results-and-observation)
 - [Future Work](#future-work)
 - [Citation](#citation)
 
@@ -54,6 +55,15 @@ Apart from the last layer where Softmax was used, ReLU was used between all laye
 
 Model parameters: Weights of model, Edge weights
 
+## Results and Observation
+Splitting the data into 80-20, a training accuracy of 56%, and a validation accuracy of 50% was acheived at 200 epochs. This is a low score, but when compared with the [leader board of a similar competition](https://www.kaggle.com/c/chess/leaderboard) on Kaggle, the achieved results are of a slighlty better level. <br>
+
+Multiple hyper-tuning were done so as to first overfit the training set <br>
+1. Increased the sizes of the hidden state - The model performed poor (training accuracy < 50%)
+2. Increased the number of hidden layers - Again poor performance
+3. Running for a larger number of epochs - Model saturates around 200 epochs
+The above were performed so as to first overfit on training data, and later generalize by means of regularizing. But none gave better results than the exisitng configuration. <br>
+The reason for the low accuracy may be contributed to the  less node degree. Intuitively an average chess player can not be judged with 8 games of his, played over a span of 10 years
 ## To Run
 
 Download the following files in a same directory
