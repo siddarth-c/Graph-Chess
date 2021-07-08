@@ -4,7 +4,7 @@ This is an attempt to predict the result of a game of chess between any 2 player
 
 This repository contains:
 
-1. [The dataset](out.txt) and its [readme](README.chess)
+1. The dataset (3 CSV files)
 2. The python [code](GrandMaster.py)
 3. The generated [graph](graph.png)
 4. And a few other ReadMe related files
@@ -53,24 +53,21 @@ Optimizer: Adam with learning rate = 0.01 <br>
 Loss Function: Cross Entropy Loss <br>
 Apart from the last layer where Softmax was used, ReLU was used between all layers
 
-Model parameters: Weights of model, Edge weights
 
 ## Results and Observation
-Splitting the data into 80-20, a training accuracy of 56%, and a validation accuracy of 50% was acheived at 200 epochs. This is a low score, but when compared with the [leader board of a similar competition](https://www.kaggle.com/c/chess/leaderboard) on Kaggle, the achieved results are of a slighlty better level. <br>
+Splitting the data into 85-15, a RMSE of 0.6 was achieved on the validation set. Even though this is an classification task, it was considered to be a regression task in the [Kaggle Competition](https://www.kaggle.com/c/chess/overview). The achieved RMSE on the validation split easily tops the [leader board](https://www.kaggle.com/c/chess/leaderboard). <br>
+But the achieved results are still low. It may be due to to the very less node degree. Intuitively an average chess player can not be judged with 17 games of his, played over a span of 10 years
 
-Multiple hyper-tuning were done so as to first overfit the training set <br>
-1. Increased the sizes of the hidden state - The model performed poor (training accuracy < 50%)
-2. Increased the number of hidden layers - Again poor performance
-3. Running for a larger number of epochs - Model saturates around 200 epochs
-The above were performed so as to first overfit on training data, and later generalize by means of regularizing. But none gave better results than the exisitng configuration. <br>
-The reason for the low accuracy may be contributed to the  less node degree. Intuitively an average chess player can not be judged with 8 games of his, played over a span of 10 years
+
 ## To Run
 
 Download the following files in a same directory
 
 ```
 grandmaster.py
-out.txt
+cross_validation_dataset.csv
+training_data.csv
+test_data.csv
 ```
 and make sure you have the following libraries installed.
 ```
@@ -84,6 +81,7 @@ Run grandmaster.py
 cd directory-where-the-files-are-saved
 python3 grandmaster.py
 ```
+
 ## Future Work
 The problem that was encountered while building the graph network was the inability to differentiate the win and loss edges via positive and negative edge weights. This is important because if all the edge weights are positive then there would be no difference between a winning directed edge and a lossing directed edge. None of the present (Jun 2021) graph neural algorithms support negative edge weights, and if in future any algorithm with this ability is introduced, it may be used to experiment on this datasset.
 
