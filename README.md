@@ -55,7 +55,7 @@ Apart from the last layer where Softmax was used, ReLU was used between all laye
 
 
 ## Results and Observation
-Splitting the data into 85-15, a RMSE of 0.6 was achieved on the validation set. Even though this is an classification task, it was considered to be a regression task in the [Kaggle Competition](https://www.kaggle.com/c/chess/overview). The achieved RMSE on the validation split easily tops the [leader board](https://www.kaggle.com/c/chess/leaderboard). <br>
+Splitting the data into 85-15, a RMSE of 0.6 was achieved on the validation set. Even though this is an classification task, it was considered to be a regression task in the [Kaggle Competition](https://www.kaggle.com/c/chess/overview). The achieved RMSE on the validation split easily tops the [leader board](https://www.kaggle.com/c/chess/leaderboard). (Please not that as on July 08, 2021 the competition's submission was disabled, hence unable to get the RMSE on test data)<br>
 But the achieved results are still low. It may be due to to the very less node degree. Intuitively an average chess player can not be judged with 17 games of his, played over a span of 10 years
 
 
